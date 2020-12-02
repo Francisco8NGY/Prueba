@@ -15,7 +15,6 @@ class PropiedadSeeder extends Seeder
     {
         Propiedad::create([
             'descripcion' => 'Bonita casa en Coquimatlan',
-            'domicilio_particular' => 'Coquimatlan',
             'domicilio_id' => 1,
             'documentos_id' => 1,
             'edad' => 5,
@@ -23,6 +22,7 @@ class PropiedadSeeder extends Seeder
             'm2construccion' => 10,
             'm2terreno' => 11,
             'no_banos' => 4,
+            'no_cuartos' => 4,
             'no_niveles' => 2,
             'nombre_propietario' => 'Francisco Vazquez Delgado',
             'tipo_propiedad' => 1,
@@ -32,7 +32,6 @@ class PropiedadSeeder extends Seeder
 
         Propiedad::create([
             'descripcion' => 'Bonita casa en Comala',
-            'domicilio_particular' => 'Comala',
             'domicilio_id' => 2,
             'documentos_id' => 2,
             'edad' => 7,
@@ -40,6 +39,7 @@ class PropiedadSeeder extends Seeder
             'm2construccion' => 12,
             'm2terreno' => 15,
             'no_banos' => 5,
+            'no_cuartos' => 5,
             'no_niveles' => 2,
             'nombre_propietario' => 'Perla Beatriz',
             'tipo_propiedad' => 1,
@@ -49,7 +49,6 @@ class PropiedadSeeder extends Seeder
 
         Propiedad::create([
             'descripcion' => 'Bonita casa en Colima',
-            'domicilio_particular' => 'Colima',
             'domicilio_id' => 3,
             'documentos_id' => 3,
             'edad' => 2,
@@ -57,6 +56,7 @@ class PropiedadSeeder extends Seeder
             'm2construccion' => 8,
             'm2terreno' => 10,
             'no_banos' => 3,
+            'no_cuartos' => 3,
             'no_niveles' => 1,
             'nombre_propietario' => 'Francisco Vazquez Delgado',
             'tipo_propiedad' => 1,
@@ -66,7 +66,6 @@ class PropiedadSeeder extends Seeder
 
         Propiedad::create([
             'descripcion' => 'Bonita casa en Colima',
-            'domicilio_particular' => 'Colima',
             'domicilio_id' => 3,
             'documentos_id' => 3,
             'edad' => 2,
@@ -74,6 +73,7 @@ class PropiedadSeeder extends Seeder
             'm2construccion' => 8,
             'm2terreno' => 10,
             'no_banos' => 3,
+            'no_cuartos' => 3,
             'no_niveles' => 1,
             'nombre_propietario' => 'Francisco Vazquez Delgado',
             'tipo_propiedad' => 1,
@@ -83,7 +83,6 @@ class PropiedadSeeder extends Seeder
 
         Propiedad::create([
             'descripcion' => 'Bonita casa en Colima',
-            'domicilio_particular' => 'Colima',
             'domicilio_id' => 3,
             'documentos_id' => 3,
             'edad' => 2,
@@ -91,6 +90,7 @@ class PropiedadSeeder extends Seeder
             'm2construccion' => 8,
             'm2terreno' => 10,
             'no_banos' => 3,
+            'no_cuartos' => 3,
             'no_niveles' => 1,
             'nombre_propietario' => 'Francisco Vazquez Delgado',
             'tipo_propiedad' => 2,
@@ -100,7 +100,6 @@ class PropiedadSeeder extends Seeder
 
         Propiedad::create([
             'descripcion' => 'Bonita casa en Colima',
-            'domicilio_particular' => 'Colima',
             'domicilio_id' => 3,
             'documentos_id' => 3,
             'edad' => 2,
@@ -108,6 +107,7 @@ class PropiedadSeeder extends Seeder
             'm2construccion' => 8,
             'm2terreno' => 10,
             'no_banos' => 3,
+            'no_cuartos' => 3,
             'no_niveles' => 1,
             'nombre_propietario' => 'Francisco Vazquez Delgado',
             'tipo_propiedad' => 2,
@@ -117,7 +117,6 @@ class PropiedadSeeder extends Seeder
 
         Propiedad::create([
             'descripcion' => 'Bonita casa en Colima',
-            'domicilio_particular' => 'Colima',
             'domicilio_id' => 3,
             'documentos_id' => 3,
             'edad' => 2,
@@ -125,6 +124,7 @@ class PropiedadSeeder extends Seeder
             'm2construccion' => 8,
             'm2terreno' => 10,
             'no_banos' => 3,
+            'no_cuartos' => 3,
             'no_niveles' => 1,
             'nombre_propietario' => 'Francisco Vazquez Delgado',
             'tipo_propiedad' => 2,
@@ -134,7 +134,6 @@ class PropiedadSeeder extends Seeder
 
         Propiedad::create([
             'descripcion' => 'Bonita casa en Colima',
-            'domicilio_particular' => 'Colima',
             'domicilio_id' => 3,
             'documentos_id' => 3,
             'edad' => 2,
@@ -142,6 +141,7 @@ class PropiedadSeeder extends Seeder
             'm2construccion' => 8,
             'm2terreno' => 10,
             'no_banos' => 3,
+            'no_cuartos' => 3,
             'no_niveles' => 1,
             'nombre_propietario' => 'Francisco Vazquez Delgado',
             'tipo_propiedad' => 3,

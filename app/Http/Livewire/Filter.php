@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
+use App\Models\Municipio;
 
 class Filter extends Component
 {
@@ -15,11 +16,12 @@ class Filter extends Component
     public $status;
     public $tipo;
     public $municipio;
-   
+    public $search;
    
     use WithPagination;
     public function render()
     {
+        $municipios = Municipio::all();
 
             if($this->status == 0 && $this->tipo == 0 ){
                 $posts = DB::table('propiedads')
@@ -33,12 +35,13 @@ class Filter extends Component
                 ->where("status","LIKE", "%$this->status%")
                 ->where('tipo_propiedad', "LIKE", "%$this->tipo%")
                 ->where('domicilios.municipio_id', "LIKE", "%$this->municipio%")
+                ->where('domicilios.calle', "Like", "%$this->search%")  
                 ->select('*')
                 ->paginate(6);
                
             }
                       
-        return view('livewire.filter', compact('posts'));
+        return view('livewire.filter', compact('posts', 'municipios'));
         
     }
     

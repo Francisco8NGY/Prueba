@@ -16,25 +16,25 @@ class DomicilioSeeder extends Seeder
     {
         Domicilio::create([
             'calle' => 'Pinosuarez #33',
+            'numero' => 2,
             'colonia' => 'centro',
             'municipio_id' => 2,
-            'localidad_id' => 2,
             'zip_codigopostal' => '28000' 
         ]);
 
         Domicilio::create([
             'calle' => 'Hidalgo #199',
+            'numero' => 5,
             'colonia' => 'centro',
             'municipio_id' => 1,
-            'localidad_id' => 1,
             'zip_codigopostal' => '28400' 
         ]);
 
         Domicilio::create([
             'calle' => 'Melchor Ocampo #54',
+            'numero' => 33,
             'colonia' => 'Lomas',
             'municipio_id' => 3,
-            'localidad_id' => 3,
             'zip_codigopostal' => '28500' 
         ]);
     }

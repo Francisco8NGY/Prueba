@@ -22,7 +22,7 @@
                     <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0  mt-2">
                         <div class="relative">
                         <select wire:model="tipo" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" >
-                            <option value="0">Tipo</option>
+                            <option >Tipo</option>
                             <option value="1">Residencial</option>
                             <option value="2">Comercial</option>
                             <option value="3">Industrial</option>
@@ -38,16 +38,9 @@
                         <div class="relative">
                         <select wire:model="municipio" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                             <option value="0">Municipio</option>
-                            <option value="1">Armeria</option>
-                            <option value="2">Colima</option>
-                            <option value="3">Comala</option>
-                            <option value="4">Coquimatlan</option>
-                            <option value="5">Cuauhtemoc</option>
-                            <option value="6">Ixtlahuacan</option>
-                            <option value="7">Manzanillo</option>
-                            <option value="8">Minatitlan</option>
-                            <option value="9">Tecoman</option>
-                            <option value="10">Villa de alvarez</option>
+                            @foreach ($municipios as $municipio)
+                                <option value="{{$municipio->id}}">{{$municipio->name}}</option>
+                            @endforeach
                         </select>
                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -55,26 +48,9 @@
                         </div>
                     </div>
             
-                    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0  mt-2">
-                        <div class="relative">
-                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                            <option value="">Localidad</option>
-                            <option>Armeria</option>
-                            <option>Colima</option>
-                            <option>Comala</option>
-                            <option>Coquimatlan</option>
-                            <option>Cuauhtemoc</option>
-                            <option>Ixtlahuacan</option>
-                            <option>Manzanillo</option>
-                            <option>Minatitlan</option>
-                            <option>Tecoman</option>
-                            <option>Villa de alvarez</option>
-                        </select>
-                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                        </div>
-                        </div>
-                    </div>
+                   
+                     <input type="text" class="form-input rounded shadow-sm mt-1 block w-min " placeholder="Buscar dirección" wire:model="search">
+                   
         
                     
                 </div>
@@ -89,7 +65,7 @@
       
           @foreach ($posts as $post)
               <div class="max-w-sm w-full rounded overflow-hidden shadow-lg transform hover:scale-105 duration-500 ">
-                <img class="w-full bg-cover bg-center h-56 p-4" src="/images/img/{{$post->foto_frente}}" alt="Sunset in the mountains">
+                <img class="w-full bg-cover bg-center h-56 p-4" src="/storage/cover_images/{{$post->foto_frente}}" alt="Sunset in the mountains">
                 <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">{{$post->descripcion}}</div>
                 <div class="flex-1 inline-flex items-center">
@@ -110,12 +86,21 @@
                 </div>  
               </div>
           @endforeach
+        @else
+         <h1>No hay propiedades disponobles</h1>
         @endif 
       </div>
       <div class="mt-8">
         {{$posts->links()}}
       </div>
 </div>
+
+
+
+
+
+
+
 
 
 

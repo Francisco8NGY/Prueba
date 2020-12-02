@@ -9,7 +9,7 @@ use App\Models\Propiedad;
 use App\Models\Documento;
 use App\Models\Domicilio;
 use App\Models\Municipio;
-use App\Models\Localidad;
+
 
 
 class FiltroController extends Controller
@@ -23,7 +23,6 @@ class FiltroController extends Controller
         $post = Propiedad::find($id);
         $domi = Domicilio::find($post->domicilio_id);
         $muni = Municipio::find($domi->municipio_id);
-        $loca = Localidad::find($domi->localidad_id);
         $docu = Documento::find($post->documentos_id);
         
         
@@ -35,6 +34,6 @@ class FiltroController extends Controller
             $status = "En renta";
         }
 
-        return view('informacion_propiedad', compact('docu', 'status', 'post', 'muni','loca'));
+        return view('informacion_propiedad', compact('docu', 'status', 'post', 'muni'));
     }
 }

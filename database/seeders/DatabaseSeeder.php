@@ -16,7 +16,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
           $this->call(MunicipioSeeder::class);
           $this->call(DocumentoSeeder::class);
-          $this->call(LocalidadSeeder::class);
           $this->call(DomicilioSeeder::class);
           $this->call(PropiedadSeeder::class);
     }

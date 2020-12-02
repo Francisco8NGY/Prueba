@@ -16,7 +16,6 @@ class CreatePropiedadsTable extends Migration
         Schema::create('propiedads', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->longText('descripcion');
-            $table->string('domicilio_particular');
             $table->bigInteger('domicilio_id')->unsigned();
             $table->bigInteger('documentos_id')->unsigned();
             $table->integer('edad');
@@ -24,6 +23,7 @@ class CreatePropiedadsTable extends Migration
             $table->integer('m2construccion');
             $table->integer('m2terreno');
             $table->integer('no_banos');
+            $table->integer('no_cuartos');
             $table->integer('no_niveles');
             $table->string('nombre_propietario');
             $table->integer('tipo_propiedad');

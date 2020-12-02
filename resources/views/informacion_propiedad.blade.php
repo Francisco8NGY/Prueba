@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>CVC</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
 
         
           <div class=" mt-4 text-teal-500">
-            &nbsp;&nbsp;&nbsp;<span>&nbsp;&nbsp;{{$status}} &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; <i class="far fa-envelope"></i>&nbsp;&nbsp;{{$post->tipo_propiedad}}</span><span class="right"><i class="fa fa-gift"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; {{$muni->name}}&nbsp; {{$loca->name}} &nbsp;&nbsp;</span>
+            &nbsp;&nbsp;&nbsp;<span>&nbsp;&nbsp;{{$status}} &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; <i class="far fa-envelope"></i>&nbsp;&nbsp;{{$post->tipo_propiedad}}</span><span class="right"><i class="fa fa-gift"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; {{$muni->name}}&nbsp;  &nbsp;&nbsp;</span>
             <div class="float-right">
             <a href="/">Regresar</a>
             </div>
@@ -126,9 +126,14 @@
           </div>
       
           <div class="gallery mt-2">
-            <a href="/images/img/{{$docu->foto_frente}}" data-lightbox="mygallery"><img src="/images/img/{{$docu->foto_frente}}" alt=""></a>
-            <a href="/images/img/{{$docu->foto_calle}}" data-lightbox="mygallery"><img src="/images/img/{{$docu->foto_calle}}" alt=""></a>
-            <a href="/images/img/{{$docu->foto_interior}}" data-lightbox="mygallery"><img src="/images/img/{{$docu->foto_interior}}" alt=""></a> 
+            <a href="/storage/cover_images/{{$docu->foto_frente}}" data-lightbox="mygallery"><img src="/storage/cover_images/{{$docu->foto_frente}}" alt=""></a>
+            <a href="/storage/cover_images/{{$docu->foto_calle}}" data-lightbox="mygallery"><img src="/storage/cover_images/{{$docu->foto_calle}}" alt=""></a>
+            <a href="/storage/cover_images/{{$docu->foto_interior}}" data-lightbox="mygallery"><img src="/storage/cover_images/{{$docu->foto_interior}}" alt=""></a> 
+            <a href="/storage/cover_images/{{$docu->foto_fondo}}" data-lightbox="mygallery"><img src="/storage/cover_images/{{$docu->foto_fondo}}" alt=""></a>
+            <a href="/storage/cover_images/{{$docu->foto_interior}}" data-lightbox="mygallery"><img src="/storage/cover_images/{{$docu->foto_interior}}" alt=""></a>
+            <a href="/storage/cover_images/{{$docu->foto_nivel}}" data-lightbox="mygallery"><img src="/storage/cover_images/{{$docu->foto_nivel}}" alt=""></a>
+            <a href="/storage/cover_images/{{$docu->recibo_predial}}" data-lightbox="mygallery"><img src="/storage/cover_images/{{$docu->recibo_predial}}" alt=""></a>
+
       </div>
      
     </div>
@@ -150,3 +155,4 @@
       @livewireScripts           
     </body>
 </html>
+
